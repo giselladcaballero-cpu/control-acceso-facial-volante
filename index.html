@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Control de acceso facial para gimnasios</title>
+<meta name="description" content="Sistema de control de acceso facial para gimnasios: sin carnets compartidos, avisos automáticos de vencidos y funciona sin internet.">
+<style>
+  :root { --bg:#0a0a0a; --card:#141414; --text:#f5f5f5; --muted:#8a8a8a; --line:#272727; --accent:#1E9DE0; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+  main { max-width:640px; margin:0 auto; padding:0 0 40px; }
+  header { display:flex; align-items:center; gap:14px; padding:28px 24px 20px; }
+  header img { width:48px; height:48px; border-radius:50%; object-fit:cover; }
+  header .brand { font-weight:800; text-transform:uppercase; letter-spacing:.04em; font-size:18px; }
+  header .sub { color:var(--muted); font-size:13px; }
+  .hero { padding:8px 24px 32px; border-bottom:1px solid var(--line); }
+  h1 { margin:0 0 14px; font-size:clamp(28px,7vw,40px); line-height:1.15; font-weight:800; letter-spacing:-.01em; }
+  .lead { margin:0; font-size:17px; color:#c7c7c7; }
+  .benefits { display:flex; flex-direction:column; gap:24px; padding:32px 24px; }
+  .benefit { display:flex; gap:16px; align-items:flex-start; }
+  .icon { flex:0 0 48px; height:48px; border-radius:12px; background:var(--card); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; }
+  .benefit h2 { margin:0 0 4px; font-size:17px; font-weight:700; }
+  .benefit p { margin:0; font-size:14px; color:#9a9a9a; }
+  .how { background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:28px 24px; }
+  .how .label { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); margin-bottom:16px; }
+  .steps { display:grid; grid-template-columns:1fr; gap:18px; }
+  @media (min-width:560px) { .steps { grid-template-columns:repeat(3,1fr); } }
+  .steps .n { font-size:24px; font-weight:800; color:var(--line); margin-bottom:4px; }
+  .steps h3 { margin:0 0 4px; font-size:14px; font-weight:600; }
+  .steps p { margin:0; font-size:12px; color:var(--muted); }
+  .proof { padding:24px; display:flex; align-items:center; gap:12px; font-size:14px; color:#c7c7c7; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#3ddc84; flex-shrink:0; }
+  .cta { background:var(--accent); padding:32px 24px; display:flex; flex-direction:column; gap:14px; }
+  .cta .q { font-size:20px; font-weight:800; color:#0a0a0a; }
+  .cta a.btn { align-self:flex-start; background:#0a0a0a; color:#fff; text-decoration:none; padding:14px 26px; border-radius:10px; font-weight:700; font-size:15px; }
+  .cta .num { font-size:13px; color:#0a0a0a; opacity:.75; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="assets/logo.png" alt="Logo">
+    <div>
+      <div class="brand">Control de acceso facial</div>
+      <div class="sub">Software para gimnasios</div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Dejá de perder plata<br>en carnets compartidos.</h1>
+    <p class="lead">El sistema de control de acceso que ya funciona todos los días en un gimnasio real, ahora disponible para el tuyo.</p>
+  </div>
+
+  <div class="benefits">
+    <div class="benefit">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E9DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4"></path><path d="M15 3h4a2 2 0 0 1 2 2v4"></path><path d="M9 21H5a2 2 0 0 1-2-2v-4"></path><path d="M15 21h4a2 2 0 0 0 2-2v-4"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+      <div><h2>Tu cara es tu carnet</h2><p>Nadie puede prestarle su acceso a otro socio: el reconocimiento facial identifica a cada persona, no una tarjeta.</p></div>
+    </div>
+    <div class="benefit">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E9DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div>
+      <div><h2>Sabés quién debe, sin perseguir a nadie</h2><p>Aviso automático en la puerta (verde o rojo) y recordatorio directo por WhatsApp a los socios vencidos. Se le puede sumar un sonido distinto para cuando el acceso se niega por vencimiento o por no estar registrado.</p></div>
+    </div>
+    <div class="benefit">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E9DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path></svg></div>
+      <div><h2>Corre en una computadora normal, sin internet</h2><p>Se instala en una PC común del gimnasio. El reconocimiento facial funciona sin conexión: no depende de internet ni de pagar nube, y todos los datos quedan guardados ahí mismo.</p></div>
+    </div>
+  </div>
+
+  <div class="how">
+    <div class="label">Cómo funciona</div>
+    <div class="steps">
+      <div><div class="n">01</div><h3>Cargás a tus socios</h3><p>Una sola vez, con nombre y una foto desde la cámara.</p></div>
+      <div><div class="n">02</div><h3>La cámara los reconoce sola</h3><p>En la entrada, sin que nadie chequee una lista.</p></div>
+      <div><div class="n">03</div><h3>Vos cobrás y controlás todo</h3><p>Desde una pantalla simple, con reportes de caja.</p></div>
+    </div>
+  </div>
+
+  <div class="proof">
+    <div class="dot"></div>
+    <div>Ya en funcionamiento todos los días en un gimnasio real.</div>
+  </div>
+
+  <div class="cta">
+    <div class="q">¿Querés verlo funcionando en tu gimnasio?</div>
+    <a class="btn" href="https://wa.me/5492614601958">Escribinos por WhatsApp</a>
+    <div class="num">Si el botón no abre WhatsApp, guardá este número: <strong>261 460-1958</strong></div>
+  </div>
+</main>
+</body>
+</html>
