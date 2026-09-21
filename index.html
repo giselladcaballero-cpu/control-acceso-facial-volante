@@ -11,7 +11,7 @@
   body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
   main { max-width:640px; margin:0 auto; padding:0 0 40px; }
   header { display:flex; align-items:center; gap:14px; padding:28px 24px 20px; }
-  header img { width:48px; height:48px; border-radius:50%; object-fit:cover; }
+  header .logo-mark { width:48px; height:48px; border-radius:50%; background:var(--card); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
   header .brand { font-weight:800; text-transform:uppercase; letter-spacing:.04em; font-size:18px; }
   header .sub { color:var(--muted); font-size:13px; }
   .hero { padding:8px 24px 32px; border-bottom:1px solid var(--line); }
@@ -40,7 +40,7 @@
 <body>
 <main>
   <header>
-    <img src="assets/logo.png" alt="Logo">
+    <div class="logo-mark"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E9DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4"></path><path d="M15 3h4a2 2 0 0 1 2 2v4"></path><path d="M9 21H5a2 2 0 0 1-2-2v-4"></path><path d="M15 21h4a2 2 0 0 0 2-2v-4"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
     <div>
       <div class="brand">Control de acceso facial</div>
       <div class="sub">Software para gimnasios</div>
